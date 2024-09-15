@@ -1,3 +1,4 @@
+//............................................Functions to Create and Update Tasks........................
 function createTask(title, description, category) {
     return {
         title,
@@ -34,7 +35,7 @@ function createTask(title, description, category) {
         }
     };
 }
-
+//..................................................Functions to create Tasks using Inheritance..............................
 function createWorkTask(title, description, deadline) {
     let task = createTask(title, description, "Work");
     return {
@@ -69,9 +70,12 @@ function createPersonalTask(title, description, priority) {
     }
 }
 
+//.......................................Function to Display all Tasks.....................................
 function displayTaskDetails(task) {
     task.displayDetails();
 }
+
+//.........................................Creating and Calling Tasks.......................................
 
 let task1 = createTask("Buy Groceries", "Get milk, eggs and bread from the store.", "Shopping")
 console.log("+---------------------------------------------------------------+");
