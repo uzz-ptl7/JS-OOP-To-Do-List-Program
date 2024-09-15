@@ -10,10 +10,12 @@ function createTask(title, description, category) {
         },
 
         displayDetails() {
+            // console.log("+---------------------------------------------------------------+");
             console.log(`\t Category: ${this.category}`);
             console.log(`\t Task: ${this.title}`);
             console.log(`\t Description: ${this.description}`);
             console.log(`${this.completed ? "\t Task is Completed" : "\t Task is not Completed"}`);
+            // console.log("+---------------------------------------------------------------+");
         },
 
         updateTaskTitle(newTitle) {
