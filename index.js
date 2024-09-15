@@ -91,10 +91,22 @@ console.log("+---------------------------------------------------------------+")
 let task3 = createPersonalTask("Call Mum","Call to ask health", "High")
 console.log("Personal related Tasks");
 console.log("+---------------------------------------------------------------+");
-task3.displayDetails();
+// task3.displayDetails();
+displayTaskDetails(task3);
 console.log("+---------------------------------------------------------------+");
 
 task3.toggleCompleted();
 console.log("+---------------------------------------------------------------+");
 task3.displayDetails();
+console.log("+---------------------------------------------------------------+");
+
+let tasks = [task1, task2, task3];
+
+console.log("All Tasks");
+console.log("+---------------------------------------------------------------+");
+tasks.forEach(task => {
+        // task.displayDetails();
+        displayTaskDetails(task);
+        console.log("\n");
+    });
 console.log("+---------------------------------------------------------------+");
