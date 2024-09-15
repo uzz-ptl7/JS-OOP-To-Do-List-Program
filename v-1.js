@@ -1,7 +1,8 @@
 class Task {
-    constructor(title, description) {
+    constructor(title, description, category) {
         this.title = title;
         this.description = description;
+        this.category = category;
         this.completed = false;
     }
 
@@ -11,20 +12,27 @@ class Task {
 
     displayDetails() {
         console.log("+---------------------------------------------------------------+")
-        console.log(`\t Title: ${this.title}`);
+        
+        console.log(`\t Category: ${this.category}`);
+        console.log(`\t Task: ${this.title}`);
         console.log(`\t Description: ${this.description}`);
         // console.log(`\t Completed: ${this.completed}`);
-        if (this.completed) {
-            console.log("\t Task is Completed");
-        } 
-        else {
-            console.log("\t Task is Not Completed");
-        }
+        // if (this.completed) {
+        //     console.log("\t Task is Completed");
+        // } 
+        // else {
+        //     console.log("\t Task is Not Completed");
+        // }
+
+        //.........Using Ternary Operators for If and Else Statements...................
+        console.log(`${this.completed ? "\t Task is Completed" : "\t Task is not Completed"}`);
+        
+
         console.log("+---------------------------------------------------------------+")
     }
 }
 
-let task1 = new Task("Buy Groceries", "Get milk, eggs and bread from the store.");
+let task1 = new Task("Buy Groceries", "Get milk, eggs and bread from the store.", "Shopping");
 
 task1.displayDetails();
 task1.toogleCompleted();
